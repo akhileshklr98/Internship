@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+
+<body>
+    <div class="container">
+        <h4>Classes</h4>           
+        <table class="table table-bordered" *ngIf = 'clss && clss.length'>
+          <thead>
+            <tr>
+              <th>Standard</th>
+              <th>Division</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let cls of clss' >
+              <td>{{ cls.Standard }}</td>
+              <td>{{ cls.Division }}</td>
+              <td><button class="btn btn-danger" (click)="delete(cls.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>

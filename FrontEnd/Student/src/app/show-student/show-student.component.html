@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+
+
+<body>
+    <div class="container">
+        <h4>Students</h4>           
+        <table class="table table-bordered" *ngIf = 'students && students.length'>
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Mobile Number</th>
+              <th>Class ID</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let student of students' >
+              <td>{{ student.RollNo }}</td>
+              <td>{{ student.Name }}</td>
+              <td>{{ student.MobileNo }}</td>
+              <td>{{ student.ClassID }}</td>
+              <td><button class="btn btn-danger" (click)="delete(student.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
